@@ -1,0 +1,488 @@
+{
+  "paths": {
+    "sourcePath": "source/",
+    "buildPath": "build/",
+    "jsPath": "js/",
+    "libPath": "lib/",
+    "tsPath": "ts/",
+    "assetsPath": "res/",
+    "lessPath": "less/",
+    "cssPath": "css/",
+    "imagesPath": "images/",
+    "temp": "./temp/"
+  },
+  "supportedResolutions": {
+    "desktop": "desktop",
+    "hd": "hd",
+    "sd": "sd",
+    "ld": "ld"
+  },
+  "libVersions": {
+    "pixi": "4.0",
+    "pixi-particles": "3.2.0",
+    "pixi-spine": "4.0",
+    "howler": "2.1.1",
+    "three": "r126",
+    "OrbitControls": "r126",
+    "GLTFLoader": "r126",
+    "SkeletonUtils": "r126",
+    "RGBELoader": "r126",
+    "textTexture": "3.2.1",
+    "textSprite": "3.2.0",
+    "three.interaction": "0.0.1",
+    "pixi-projection-spine.js": "0.3",
+    "pixi-compressed-textures": "0.1",
+    "neutrinoparticles.umd.js": "2.0.0",
+    "neutrinoparticles.pixi.umd.js": "2.0.0",
+    "dragonBones": "0.0.0",
+    "pixi-textinput": "0.0.0",
+    "pixi-bridge": "0.0.1",
+    "base-core": "1.0.16",
+    "Slot": "1.2.0",
+    "platform-core": "1.0.0"
+  },
+  "libIncludes": [
+    "dat.gui.js",
+    "pixi.js",
+    "pixi-particles.js",
+    "pixi-spine.js",
+    "decomp.js",
+    "matter.js",
+    "three.js",
+    "OrbitControls.js",
+    "GLTFLoader.js",
+    "SkeletonUtils.js",
+    "RGBELoader.js",
+    "textTexture@3.2.1.js",
+    "textSprite@3.2.0.js",
+    "three.interaction.js",
+    "howler.core.js",
+    "pixi-projection-spine.js",
+    "pixi-compressed-textures.js",
+    "dragonBones.js",
+    "pixi-textinput.js",
+    "adapter-interface.js",
+    "neutrinoparticles.umd.js",
+    "neutrinoparticles.pixi.umd.js",
+    "pixi-bridge.js",
+    "interpolation.js",
+    "base-core.js",
+    "platform-core.js",
+    "slot-core.js"
+  ],
+  "clean": {
+    "options": {
+      "force": true
+    }
+  },
+  "ts": {
+    "options": {
+      "fast": "never",
+      "sourceMap": false,
+      "inlineSourceMap": false,
+      "noResolve": false,
+      "noUnusedLocals": false,
+      "skipLibCheck": true,
+      "pretty": true
+    },
+    "default": {
+      "tsconfig": true
+    }
+  },
+  "tslint": {
+    "options": {
+      "configuration": "tslint.json",
+      "force": true,
+      "typeCheck": true,
+      "fix": true
+    }
+  },
+  "fileindex": {
+    "options": {
+      "format": "json_flat",
+      "pretty": true
+    },
+    "files": [
+      {
+        "dest": "<%= assetsDir %>manifest/list_base_<%= dtRes %>.json",
+        "src": [
+          "images/common/preload/**/*.json",
+          "images/common/preload/**/*.png",
+          "images/common/preload/**/*.webp",
+          "images/common/preload/**/*.jpg",
+          "images/common/preload/**/*.atlas",
+          "images/<%= dtRes %>/preload/**/*.json",
+          "images/<%= dtRes %>/preload/**/*.png",
+          "images/<%= dtRes %>/preload/**/*.webp",
+          "images/<%= dtRes %>/preload/**/*.jpg",
+          "images/<%= dtRes %>/preload/**/*.atlas"
+        ],
+        "cwd": "<%= assetsDir %>"
+      },
+      {
+        "dest": "<%= assetsDir %>manifest/list_base_<%= hdRes %>.json",
+        "src": [
+          "images/common/preload/**/*.json",
+          "images/common/preload/**/*.png",
+          "images/common/preload/**/*.webp",
+          "images/common/preload/**/*.jpg",
+          "images/common/preload/**/*.atlas",
+          "images/<%= hdRes %>/preload/**/*.json",
+          "images/<%= hdRes %>/preload/**/*.png",
+          "images/<%= hdRes %>/preload/**/*.webp",
+          "images/<%= hdRes %>/preload/**/*.jpg"
+        ],
+        "cwd": "<%= assetsDir %>"
+      },
+      {
+        "dest": "<%= assetsDir %>manifest/list_base_<%= sdRes %>.json",
+        "src": [
+          "images/common/preload/**/*.json",
+          "images/common/preload/**/*.png",
+          "images/common/preload/**/*.webp",
+          "images/common/preload/**/*.jpg",
+          "images/common/preload/**/*.atlas",
+          "images/<%= sdRes %>/preload/**/*.json",
+          "images/<%= sdRes %>/preload/**/*.png",
+          "images/<%= sdRes %>/preload/**/*.webp",
+          "images/<%= sdRes %>/preload/**/*.jpg"
+        ],
+        "cwd": "<%= assetsDir %>"
+      },
+      {
+        "dest": "<%= assetsDir %>manifest/list_base_<%= ldRes %>.json",
+        "src": [
+          "images/common/preload/**/*.json",
+          "images/common/preload/**/*.png",
+          "images/common/preload/**/*.webp",
+          "images/common/preload/**/*.jpg",
+          "images/common/preload/**/*.atlas",
+          "images/<%= ldRes %>/preload/**/*.json",
+          "images/<%= ldRes %>/preload/**/*.png",
+          "images/<%= ldRes %>/preload/**/*.webp",
+          "images/<%= ldRes %>/preload/**/*.jpg"
+        ],
+        "cwd": "<%= assetsDir %>"
+      }
+    ]
+  },
+  "concatManifest": {
+    "options": {
+      "pretty": false,
+      "commonIncludes": {
+        "main_data": [
+          "configData.json",
+          "baseGame.json",
+          "freeGame.json",
+          "bonusGame.json"
+        ]
+      }
+    },
+    "files": [
+      {
+        "dest": "<%= assetDestDir %>manifest/<%= dtRes %>/main_data.json",
+        "src": [
+          "<%= dtRes %>/consolePanel.json"
+        ],
+        "cwd": "<%= assetsDir %>viewManifest/"
+      },
+      {
+        "dest": "<%= assetDestDir %>manifest/<%= hdRes %>/main_data.json",
+        "src": [
+          "<%= hdRes %>/consolePanel.json"
+        ],
+        "cwd": "<%= assetsDir %>viewManifest/"
+      },
+      {
+        "dest": "<%= assetDestDir %>manifest/<%= sdRes %>/main_data.json",
+        "src": [
+          "<%= hdRes %>/consolePanel.json"
+        ],
+        "cwd": "<%= assetsDir %>viewManifest/"
+      },
+      {
+        "dest": "<%= assetDestDir %>manifest/<%= ldRes %>/main_data.json",
+        "src": [
+          "<%= hdRes %>/consolePanel.json"
+        ],
+        "cwd": "<%= assetsDir %>viewManifest/"
+      }
+    ]
+  },
+  "listManifest": {
+    "options": {
+      "pretty": false
+    },
+    "files": [
+      {
+        "dest": "<%= assetDestDir %>manifest/list_base_<%= dtRes %>.json",
+        "src": "<%= assetsDir %>manifest/list_base_<%= dtRes %>.json"
+      },
+      {
+        "dest": "<%= assetDestDir %>manifest/list_base_<%= hdRes %>.json",
+        "src": "<%= assetsDir %>manifest/list_base_<%= hdRes %>.json"
+      },
+      {
+        "dest": "<%= assetDestDir %>manifest/list_base_<%= sdRes %>.json",
+        "src": "<%= assetsDir %>manifest/list_base_<%= sdRes %>.json"
+      },
+      {
+        "dest": "<%= assetDestDir %>manifest/list_base_<%= ldRes %>.json",
+        "src": "<%= assetsDir %>manifest/list_base_<%= ldRes %>.json"
+      }
+    ]
+  },
+  "concat": {
+    "options": {
+      "separator": "\n",
+      "expand": true,
+      "nonull": true,
+      "stripBanners": true,
+      "sourceMap": false,
+      "banner": "\"\";\n"
+    }
+  },
+  "uglify": {
+    "options": {
+      "compress": {
+        "drop_console": true,
+        "dead_code": true
+      },
+      "preserveComments": false,
+      "quoteStyle": 1,
+      "screwIE8": true,
+      "sourceMap": false,
+      "mangle": {
+        "reserved": [
+          "ingenuity",
+          "PIXI"
+        ]
+      },
+      "mangleProperties": false,
+      "unsafe": false,
+      "conditionals": true,
+      "comparisons": true,
+      "evaluate": true,
+      "booleans": true,
+      "loops": true,
+      "unused": true,
+      "hoist_funs": true,
+      "hoist_vars": false,
+      "if_return": true,
+      "join_vars": true,
+      "cascade": true,
+      "side_effects": true,
+      "warnings": true,
+      "reserveDOMCache": true
+    }
+  },
+  "less": {
+    "debug": {
+      "options": {
+        "strictUnits": true,
+        "syncImport": true,
+        "ieCompat": false,
+        "relativeUrls": true
+      },
+      "files": [
+        {
+          "src": "<%= lessDir %>main.less",
+          "dest": "<%= cssDir %>main.css"
+        },
+        {
+          "src": "<%= lessDir %><%=ldRes %>/main.less",
+          "dest": "<%= cssDir %><%=ldRes %>/main.css"
+        }
+      ]
+    },
+    "build": {
+      "options": {
+        "paths": [
+          "css"
+        ],
+        "ieCompat": false,
+        "compress": true,
+        "cleancss": true,
+        "optimization": 1,
+        "strictUnits": true,
+        "syncImport": true,
+        "relativeUrls": false,
+        "modifyvars": {
+          "imgPath": ""
+        }
+      },
+      "files": [
+        {
+          "src": "<%= lessDir %>main.less",
+          "dest": "<%= cssDir %>main.css"
+        }
+      ]
+    }
+  },
+  "copy": {
+    "options": {
+      "expand": true
+    },
+    "debug": {
+      "files": [
+        {
+          "expand": true,
+          "cwd": "<%= libDir %>",
+          "src": [
+            "*.js"
+          ],
+          "dest": "<%= jsDestDir %>"
+        }
+      ]
+    },
+    "images": {
+      "files": [
+        {
+          "expand": true,
+          "cwd": "<%= assetsDir %>images",
+          "src": [
+            "**"
+          ],
+          "dest": "<%= assetDestDir %>images"
+        }
+      ]
+    },
+    "main": {
+      "files": [
+        {
+          "expand": true,
+          "cwd": "<%= assetsDir %>lang/",
+          "src": [
+            "**"
+          ],
+          "dest": "<%= assetDestDir %>lang/"
+        },
+        {
+          "expand": true,
+          "cwd": "<%= assetsDir %>audio/",
+          "src": [
+            "**"
+          ],
+          "dest": "<%= assetDestDir %>audio/"
+        },
+        {
+          "expand": true,
+          "cwd": "<%= assetsDir %>font/",
+          "src": [
+            "**"
+          ],
+          "dest": "<%= assetDestDir %>font/"
+        },
+        {
+          "expand": true,
+          "cwd": "<%= assetsDir %>video/",
+          "src": [
+            "**"
+          ],
+          "dest": "<%= assetDestDir %>video/"
+        },
+        {
+          "expand": true,
+          "cwd": "<%= assetsDir %>three/",
+          "src": [
+            "**"
+          ],
+          "dest": "<%= assetDestDir %>three/"
+        },
+        {
+          "expand": true,
+          "cwd": "<%= assetsDir %>images/common/ct/",
+          "src": [
+            "**"
+          ],
+          "dest": "<%= assetDestDir %>images/common/ct/"
+        },
+        {
+          "expand": true,
+          "cwd": "<%= assetsDir %>js/",
+          "src": [
+            "**"
+          ],
+          "dest": "<%= assetDestDir %>js/"
+        },
+        {
+          "expand": true,
+          "cwd": "<%= sourcePath %>",
+          "src": [
+            "*.html"
+          ],
+          "dest": "<%= buildPath %>"
+        },
+        {
+          "expand": true,
+          "cwd": "<%= assetsDir %>manifest/",
+          "src": [
+            "mainManifest.json",
+            "mainManifestMobile.json",
+            "mainManifestSlowMobile.json"
+          ],
+          "dest": "<%= assetDestDir %>manifest/"
+        },
+        {
+          "expand": true,
+          "cwd": "<%= assetsDir %>manifest/",
+          "src": [
+            "currencySymbols.json"
+          ],
+          "dest": "<%= assetDestDir %>manifest/"
+        }
+      ]
+    }
+  },
+  "updateGameDebug": {
+    "debug": {
+      "options": {
+        "debug": true
+      },
+      "files": [
+        {
+          "dest": "<%= buildPath %>index.html",
+          "src": "<%= sourcePath %>index.html"
+        }
+      ]
+    },
+    "build": {
+      "options": {
+        "debug": false
+      },
+      "files": [
+        {
+          "dest": "<%= buildPath %>index.html",
+          "src": "<%= sourcePath %>index.html"
+        }
+      ]
+    }
+  },
+  "watch": {
+    "options": {
+      "atBegin": true,
+      "livereload": true,
+      "event": [
+        "all"
+      ]
+    }
+  },
+  "browserSync": {
+    "dev": {
+      "bsFiles": {
+        "src": "build/**/*"
+      },
+      "options": {
+        "port": 8080,
+        "watchTask": true,
+        "server": "./build",
+        "ui": {
+          "port": 8082,
+          "weinre": {
+            "port": 9090
+          }
+        }
+      }
+    }
+  }
+}

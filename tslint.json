@@ -1,0 +1,196 @@
+{
+	"extends": "tslint:recommended",
+	"rules": {
+		"array-type": [
+			true,
+			"array"
+		],
+		"new-parens": true,
+		"no-arg": true,
+		"no-bitwise": true,
+		"class-name": true,
+		"no-internal-module": true,
+		"no-switch-case-fall-through": true,
+		"no-unnecessary-type-assertion": true,
+		"no-trailing-whitespace": [
+			true,
+			"ignore-template-strings",
+			"ignore-comments",
+			"ignore-jsdoc"
+		],
+		"variable-name": [
+			false,
+			"ban-keywords",
+			"check-format",
+			"allow-leading-underscore",
+			"allow-snake-case"
+		],
+		"no-any": false,
+		"no-magic-numbers": true,
+		"typedef": [
+			true,
+			"call-signature",
+			"parameter",
+			"property-declaration",
+			"variable-declaration",
+			"member-variable-declaration",
+			"object-destructuring",
+			"array-destructuring",
+			"arrow-call-signature",
+			"arrow-parameter"
+		],
+		"no-var-keyword": true,
+		"no-var-requires": true,
+		"object-literal-shorthand": true,
+		"one-line": [
+			true,
+			"check-catch",
+			"check-finally",
+			"check-else",
+			"check-open-brace"
+		],
+		"prefer-const": true,
+		"semicolon": [
+			true,
+			"always"
+		],
+		"triple-equals": [
+			true,
+			"allow-null-check",
+			"allow-undefined-check"
+		],
+		"object-literal-key-quotes": [
+			true,
+			"consistent-as-needed"
+		],
+		"indent": [
+			true,
+			"spaces",
+			4
+		],
+		"curly": [
+			true,
+			"ignore-same-line"
+		],
+		"no-duplicate-super": true,
+		"no-duplicate-variable": true,
+		"no-eval": true,
+		"no-shadowed-variable": true,
+		"trailing-comma": true,
+		"no-empty": [
+			true,
+			"allow-empty-catch"
+		],
+		"no-duplicate-switch-case": true,
+		"no-conditional-assignment": true,
+		"no-duplicate-imports": true,
+		"no-invalid-this": true,
+		"no-misused-new": true,
+		"no-consecutive-blank-lines": true,
+		"interface-name": [
+			true,
+			"always-prefix"
+		],
+		"interface-over-type-literal": true,
+		"quotemark": [
+			true,
+			"double",
+			"avoid-escape",
+			"avoid-template"
+		],
+		"jsdoc-format": [
+			true
+		],
+		"member-access": true,
+		"no-import-side-effect": true,
+		"no-string-literal": true,
+		"no-sparse-arrays": true,
+		"no-non-null-assertion": true,
+		"no-unbound-method": [
+			true,
+			"ignore-static"
+		],
+		"no-unsafe-finally": true,
+		"no-unused-variable": [
+			true,
+			"check-parameters"
+		],
+		"no-unnecessary-qualifier": true,
+		"no-parameter-reassignment": true,
+		"no-use-before-declare": true,
+		"only-arrow-functions": [
+			true,
+			"allow-declarations",
+			"allow-named-functions"
+		],
+		"ban-comma-operator": true,
+		"label-position": true,
+		"cyclomatic-complexity": true,
+		"no-default-export": true,
+		"number-literal-format": true,
+		"newline-before-return": false,
+		"align": true,
+		"ban": [
+			true,
+			[
+				"setTimeout"
+			]
+		],
+		"ban-types": {
+			"options": [
+				[
+					"Object",
+					"Avoid using the `Object` type. Did you mean `object`?"
+				],
+				[
+					"Function",
+					"Avoid using the `Function` type. Prefer a specific function type, like `() => void`, or use `ts.AnyFunction`."
+				],
+				[
+					"Boolean",
+					"Avoid using the `Boolean` type. Did you mean `boolean`?"
+				],
+				[
+					"Number",
+					"Avoid using the `Number` type. Did you mean `number`?"
+				],
+				[
+					"String",
+					"Avoid using the `String` type. Did you mean `string`?"
+				]
+			]
+		},
+		"max-line-length": {
+			"options": [
+				180
+			]
+		},
+		"no-debugger": true,
+		"no-unused-expression": false,
+		"no-reference": false,
+		"no-namespace": false,
+		"object-literal-sort-keys": false,
+		"no-empty-interface": true,
+		"no-unnecessary-class": false,
+		"member-ordering": [
+			false
+		],
+		"no-console": {
+			"options": [
+				"debug",
+				"log",
+				"warn",
+				"time",
+				"timeEnd",
+				"trace"
+			]
+		}
+	},
+	"jsRules": {
+		"max-line-length": {
+			"options": [
+				120
+			]
+		}
+	}
+}
